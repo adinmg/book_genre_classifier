@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Genre Prediction</title>
+</head>
+
+<body>
+
+    <div class="container my-4">
+
+         <!-- <h2 class="my-4 text-center">Book Genre Prediction</h2> -->
+
+    
+
+        <div class="info alert-info my-4" role="info">
+
+            <div class="container">
+                <div class="content">
+
+                    <h1 class="my-4 text-center text-">Book Genre Classifier</h1>
+
+                    <h3>Why understanding book genres is interesting and important</h3>
+                    <p>
+
+                    </p>
+                    <p>
+                        It's difficult to figure out what genre a book is based on its title and summary, but it's important for several reasons.
+                    </p>
+
+                    
+                    <p>
+
+                    </p>
+
+                    <ul>
+                        <li> <b>Recommendation systems:</b> A good genre classifier can help recommendation systems give readers more personalized book recommendations, which can lead to more reader engagement on digital platforms. </li>
+                        <li> <b>Literary success:</b> Understanding the relationship between genres and how they're portrayed in summaries can give us insights into what makes books commercially successful, or where they could be improved. </li>
+                        <li> <b>Book themes and trends:</b> Studying book genres can help us better understand the themes and trends in the publishing industry, which can be valuable for cultural and societal studies. </li>
+                    </ul>
+                    <hr>
+
+
+                    <h3> Example </h3>
+
+                    The following example illustrates the data and metadata available for Nick Wallace's <em>Fear Itself</em>.
+                    <p>
+
+                    </p>
+                    <h4>Book metadata</h4>
+                    <table border="1" width="90%">
+                        <tbody>
+                            <tr>
+                                <td>Wikipedia ID</td>
+                                <td>5282234</td>
+                            </tr>
+                            <tr>
+                                <td>Freebase ID</td>
+                                <td>/m/0dcfrs</td>
+                            </tr>
+                            <tr>
+                                <td>Book title</td>
+                                <td>Fear Itself</td>
+                            </tr>
+                            <tr>
+                                <td>Book author</td>
+                                <td>Nick Wallace</td>
+                            </tr>
+                            <tr>
+                                <td>Publication date</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Genres</td>
+                                <td>Science Fiction, Speculative fiction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+
+                    </p>
+
+                    <h4>Plot summary</h4>
+                     It is the twenty-second century and Earth is caught in a war with powerful alien forces. Paranoia runs rampant and the Doctor 
+                     is in danger from all directions. This was the only Past Doctor Adventure to feature the Eighth Doctor, as the original novels 
+                     featuring that incarnation formed their own series, the Eighth Doctor Adventures. However, with the 2005 revival of the 
+                     television series, and the BBC's New Series Adventures being published, the Eighth Doctor Adventures came to an end.
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Form -->
+
+        <div></div>
+
+        <h2 class="my-4 text-center">Book Genre Prediction</h2>
+
+        <form class="my-4" action="/" method="POST">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter the Summary of the Book</label>
+                <textarea class="form-control" id="summary" name="summary" rows="3"></textarea>
+            </div>
+
+            <!-- button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+
+        </form>
+
+        {%if showresult%}
+            
+            <div class = "container my-4">
+              
+               <div class="alert alert-success" role="alert">
+
+                    <p>Your Summary : {{text}}...</p>
+                
+                    <p>Predicted Genre for the summary is : <span style = "color:red;font-size:1 rem;">{{genre}}</p>
+                    <hr>
+
+                </div>
+            </div>
+        {%endif%}
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
